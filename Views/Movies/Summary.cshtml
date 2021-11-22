@@ -1,0 +1,11 @@
+﻿@model _31181020918_LeGiaPhuc.Models.HoaDon
+<div class="navbar-right">
+    @Html.ActionLink("Thanh toán", "Checkout", "Movies",
+    new { @class = "btn btn-default navbar-btn" })
+</div>
+<div class="navbar-text navbar-right">
+    <b>Giỏ hàng của bạn:</b>
+    @Model.ChiTietHoaDons.Sum(x => x.SoLuong) sản phẩm,
+    @Model.TongTien.ToString("c")
+</div>
+
